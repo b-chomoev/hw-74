@@ -20,7 +20,7 @@ messagesRouter.get('/', async (req, res) => {
         allMessages.push(JSON.parse(message.toString()));
     }
 
-    res.send(allMessages);
+    res.send(allMessages.slice(-5).reverse());
 });
 
 messagesRouter.post('/', async (req, res) => {
